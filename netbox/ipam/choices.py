@@ -78,6 +78,7 @@ class IPAddressRoleChoices(ChoiceSet):
     ROLE_SECONDARY = 'secondary'
     ROLE_ANYCAST = 'anycast'
     ROLE_VIP = 'vip'
+    ROLE_FGCP = 'fgcp'
     ROLE_VRRP = 'vrrp'
     ROLE_HSRP = 'hsrp'
     ROLE_GLBP = 'glbp'
@@ -88,6 +89,7 @@ class IPAddressRoleChoices(ChoiceSet):
         (ROLE_SECONDARY, 'Secondary', 'blue'),
         (ROLE_ANYCAST, 'Anycast', 'yellow'),
         (ROLE_VIP, 'VIP', 'purple'),
+        (ROLE_FGCP, 'FGCP', 'purple'),
         (ROLE_VRRP, 'VRRP', 'green'),
         (ROLE_HSRP, 'HSRP', 'green'),
         (ROLE_GLBP, 'GLBP', 'green'),
@@ -105,6 +107,7 @@ class FHRPGroupProtocolChoices(ChoiceSet):
     PROTOCOL_VRRP3 = 'vrrp3'
     PROTOCOL_HSRP = 'hsrp'
     PROTOCOL_GLBP = 'glbp'
+    PROTOCOL_FGCP = 'fgcp'
     PROTOCOL_CARP = 'carp'
     PROTOCOL_CLUSTERXL = 'clusterxl'
     PROTOCOL_OTHER = 'other'
@@ -121,6 +124,9 @@ class FHRPGroupProtocolChoices(ChoiceSet):
         ('Cisco', (
             (PROTOCOL_HSRP, 'HSRP'),
             (PROTOCOL_GLBP, 'GLBP'),
+        )),
+        ('FortiGate', (
+            (PROTOCOL_FGCP, 'FGCP'),
         )),
         (PROTOCOL_OTHER, 'Other'),
     )
